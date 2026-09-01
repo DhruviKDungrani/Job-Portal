@@ -20,7 +20,7 @@ app.use(express.urlencoded({extended: true}));
 app.use(cookieParser());
 
 const corsOptions = {
-  origin: "http://localhost:5173",
+  origin: ["http://localhost:5173", "https://job-portal-topaz-iota.vercel.app"],
   credentials: true
 }
 app.use(cors(corsOptions));
@@ -42,7 +42,7 @@ app.use("/api/v1/job", jobRoute);
 app.use("/api/v1/application", applicationRoute);
 
 
-app.listen(PORT, () => {
+app.listen(PORT, "0.0.0.0",() => {
   connectDB();  
   console.log(`Server running on ${PORT}`);
 })
