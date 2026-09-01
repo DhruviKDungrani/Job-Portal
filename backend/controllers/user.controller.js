@@ -1,5 +1,5 @@
 import { User } from "../models/user.model.js";
-import { getDataUri } from "../utils/dataUri.js";
+import { getDataUri } from "../utils/datauri.js";
 import bcrypt from "bcryptjs";  // used to securely hash password, never store password in plain text
 import jwt from "jsonwebtoken";
 import cloudinary from "../utils/cloudinary.js";
